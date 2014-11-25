@@ -1,3 +1,48 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-gd9j1l');
+	src:url('fonts/icomoon.eot?#iefix-gd9j1l') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-gd9j1l') format('woff'),
+		url('fonts/icomoon.ttf?-gd9j1l') format('truetype'),
+		url('fonts/icomoon.svg?-gd9j1l#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before {
+	content: "\f03f";
+	color: orange;
+}
+.icon-up:before {
+	content: "\f03d";
+	color: rgb(31, 219, 31);
+}
+.icon-pen:before {
+	content: "\e600";
+	margin-right: .6em;
+}
+.icon-star:before {
+	content: "\e601";
+	color: rgb(253, 213, 5);
+	margin-right: .3em;
+	position: relative;
+	top: .1em;
+}
+
 /* Etiquetas */
 a{
 	color: #22bce0;
@@ -5,7 +50,7 @@ a{
 
 body{
 	background: #EEEEEE;
-	font-family: Arial;
+	font-family: "Open Sans";
 	font-size: 16px;
 
 }
@@ -39,17 +84,31 @@ header #avatar img{
 	border-radius: 50%;
 }
 
+header #logo{
+	margin-right: .5em;
+	border-right: 1px solid white;
+/*-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(720deg);
+	-o-transform: rotate(720deg);
+	-ms-transform: rotate(720deg);
+*/}
+
 header #logo img{
 	width: 52px;
-	border-right: 1px solid white;
-	padding-right: .5em;
+	background: white;
 	margin-right:  .5em;
 }
 
+header #logo img:hover{
+	-webkit-transition: .5s;
+	-webkit-transform: rotate(360deg);
+}
+
 nav{
+	box-shadow: rgba(0,0,0,0.5) 0px 0px 10px;
 	background: #80bca3;
 	margin: 0;
-	padding: 0 .5em;
+	padding: 0 6em 0 .5em;
 	position: relative;
 }
 
@@ -67,12 +126,25 @@ nav ul #publicar_nav{
 
 nav ul #publicar_nav a{
 	background: #22bce0;
-	padding: .8em .5em;
+	padding: .8em .5em .8em 2em;
 	border-radius: .3em;
 	box-shadow:rgba(0,0,0,0.5) 5px 5px 20px;
 	font-style: italic;
 	text-shadow:rgba(0,0,0,0.5) 2px 2px 5px;
 }	
+nav ul #publicar_nav a:before{
+	position: absolute;
+	left: 7px;
+	top: 13px;
+}
+nav ul #publicar_nav a:hover:before{
+	font-size: 1.2em;
+}
+
+nav ul li a:hover{
+	background: #343b54;
+}
+
 
 nav li{
 	display: inline-block;
@@ -83,7 +155,8 @@ nav ul li a{
 	color: white;
 	text-decoration: none;
 	display: block;
-	padding: .5em 0;
+	padding: .5em;
+	-webkit-transition: .3s;
 }
 
 footer{
@@ -111,6 +184,10 @@ footer p:last-child:before{
 
 figure{
 	margin: 0;
+}
+
+span{
+	font-family: "Open Sans";
 }
 
 /* ID's */
@@ -151,7 +228,7 @@ figure{
 }
 
 #contenido .item .image_item img{
-	width: 100px;
+	width: 101px;
 }
 
 #contenido .item .titulo_item{
@@ -176,7 +253,50 @@ figure{
 	padding: 0.1em .5em;
 }
 
+#contenido .item .votacion a{
+	text-decoration: none;
+}
+
 #contenido .item .votacion .comentarios_item,
 #contenido .item .votacion .guardar_item{
 	float: right;
+}
+
+/* Mediaquery */
+
+@media screen and (min-width: 800px){
+	#contenido{
+		overflow: hidden;
+			}
+
+	#contenido .item{
+		width: 49%;
+		float: left;
+	}
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
+	}
+}
+
+/* Formulario */
+
+.formulario{
+	padding: 1em 1em 0em 1em;
+	text-align: right;
+	display: none;
+}
+
+.formulario input{
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding: 0.2em .6em;
+}
+
+.formulario input[type="submit"]{
+	background: #22bce0;
+	border-color: #22bce0;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	font-style: italic;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	color: white;
 }

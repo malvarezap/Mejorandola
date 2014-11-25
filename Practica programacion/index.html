@@ -3,9 +3,12 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="Esto es un ejercicio de de Mejorando.la realizado por Miguel Álvarez" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 		<title>Malvarezap</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,800,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="normalize.css">
 		<link rel="stylesheet" href="estilos.css">
+		<script src="prefixfree.js"></script>
 	</head>
 	<body>
 		<header>
@@ -25,10 +28,15 @@
 				<li><a href="#">CSS3</a></li>
 				<li><a href="#">Django</a></li>
 				<li id="publicar_nav">
-					<a href="#">Publicar</a>
+					<a href="#" class="icon-pen" id="mostrar-form"><span>Publicar</span></a>
 				</li>
 			</ul>
 		</nav>
+		<form action="" id="formulario" class="formulario">
+			<input type="text" id="titulo" placeholder="Título" required>
+			<input type="url" id="url" placeholder="Enlace web" required>
+			<input type="submit" id="enviar" value="Agregar">
+		</form>
 		<section id="contenido">
 			<article class="item">
 				<figure class="image_item">
@@ -45,11 +53,11 @@
 					</span>
 				</div>
 				<div class="votacion">
-					<a href="#" class="up">U</a>
+					<a href="#" class="up icon-up"></a>
 					696
-					<a href="#" class="down">D</a>
+					<a href="#" class="down icon-down"></a>
 					<a href="#" class="comentarios_item">3</a>
-					<a href="#" class="guardar_item">X</a>
+					<a href="#" class="guardar_item icon-star"></a>
 				</div>
 			</article>
 			<article class="item">
@@ -67,11 +75,11 @@
 					</span>
 				</div>
 				<div class="votacion">
-					<a href="#" class="up">U</a>
+					<a href="#" class="up icon-up"></a>
 					696
-					<a href="#" class="down">D</a>
+					<a href="#" class="down icon-down"></a>
 					<a href="#" class="comentarios_item">3</a>
-					<a href="#" class="guardar_item">X</a>
+					<a href="#" class="guardar_item icon-star"></a>
 				</div>
 			</article>
 			<article class="item">
@@ -89,11 +97,11 @@
 					</span>
 				</div>
 				<div class="votacion">
-					<a href="#" class="up">U</a>
+					<a href="#" class="up icon-up"></a>
 					696
-					<a href="#" class="down">D</a>
+					<a href="#" class="down icon-down"></a>
 					<a href="#" class="comentarios_item">3</a>
-					<a href="#" class="guardar_item">X</a>
+					<a href="#" class="guardar_item icon-star"></a>
 				</div>
 			</article>
 			<article class="item">
@@ -111,11 +119,11 @@
 					</span>
 				</div>
 				<div class="votacion">
-					<a href="#" class="up">U</a>
+					<a href="#" class="up icon-up"></a>
 					696
-					<a href="#" class="down">D</a>
+					<a href="#" class="down icon-down"></a>
 					<a href="#" class="comentarios_item">3</a>
-					<a href="#" class="guardar_item">X</a>
+					<a href="#" class="guardar_item icon-star"></a>
 				</div>
 			</article>
 			<article class="item">
@@ -133,11 +141,11 @@
 					</span>
 				</div>
 				<div class="votacion">
-					<a href="#" class="up">U</a>
+					<a href="#" class="up icon-up"></a>
 					696
-					<a href="#" class="down">D</a>
+					<a href="#" class="down icon-down"></a>
 					<a href="#" class="comentarios_item">3</a>
-					<a href="#" class="guardar_item">X</a>
+					<a href="#" class="guardar_item icon-star"></a>
 				</div>
 			</article>
 			<article class="item">
@@ -155,17 +163,20 @@
 					</span>
 				</div>
 				<div class="votacion">
-					<a href="#" class="up">U</a>
+					<a href="#" class="up icon-up"></a>
 					696
-					<a href="#" class="down">D</a>
+					<a href="#" class="down icon-down"></a>
 					<a href="#" class="comentarios_item">3</a>
-					<a href="#" class="guardar_item">X</a>
+					<a href="#" class="guardar_item icon-star"></a>
 				</div>
 			</article>
 		</section>
+		
 		<footer>
 			<strong>Power by malvarezap</strong>
 			<p>Mejorando.la @2014</p>
 		</footer>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>		
+		<script src="formulario.js"></script>
 	</body>
 </html>
